@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Calories Calculator là một website dành riêng cho Thu Trang Phạm, để dễ dàng tính lượng calo trong mỗi bữa ăn hàng ngày."
+    />
+    <meta name="author" content="lhp1507" />
+    <meta property="og:title" content="Calories Calculator" />
+    <meta
+      property="og:description"
+      content="Calories Calculator là một website dành riêng cho Thu Trang Phạm, để dễ dàng tính lượng calo trong mỗi bữa ăn hàng ngày."
+    />
+    <title>Calories Calculator</title>
+    <link rel="shortcut icon" href="/src/images/logo.png" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="/vendors/bootstrap-5.1.0-dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <script src="/vendors/bootstrap-5.1.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/src/js/script.js"></script>
+  </head>
+  <body>
+    <table
+      id="mainTable"
+      class="table table-striped table-responsive table-responsive-sm"
+    >
+      <thead class="table-light">
+        <tr>
+          <th scope="col" class="col-2">Kind of food</th>
+          <th scope="col" class="col-1">#</th>
+          <th scope="col" class="col-3">Food</th>
+          <th scope="col" class="col-2">Calories per 100gr (kcal)</th>
+          <th scope="col" class="col-2">Actual used (gr)</th>
+          <th scope="col" class="col-2">Actual calories (kcal)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan="5" class="align-middle">Meet</th>
+          <th scope="row">1</th>
+          <td>Ức gà</td>
+          <td class="align-middle text-end pe-5 kcal-unit">167.9</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Thịt nạc heo</td>
+          <td class="align-middle text-end pe-5 kcal-unit">145.0</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Thịt bò</td>
+          <td class="align-middle text-end pe-5 kcal-unit">250.5</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Cá lăng</td>
+          <td class="align-middle text-end pe-5 kcal-unit">112.0</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Cá rô phi</td>
+          <td class="align-middle text-end pe-5 kcal-unit">128.6</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th rowspan="15" class="align-middle">Vegetables</th>
+          <th scope="row">6</th>
+          <td>Ngô</td>
+          <td class="align-middle text-end pe-5 kcal-unit">90.3</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>Ớt chuông</td>
+          <td class="align-middle text-end pe-5 kcal-unit">31.0</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td>Cà chua</td>
+          <td class="align-middle text-end pe-5 kcal-unit">17.7</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">9</th>
+          <td>Nấm kim châm</td>
+          <td class="align-middle text-end pe-5 kcal-unit">36.6</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">10</th>
+          <td>Nấm đùi gà</td>
+          <td class="align-middle text-end pe-5 kcal-unit">28.0</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">11</th>
+          <td>Cải thảo</td>
+          <td class="align-middle text-end pe-5 kcal-unit">12.0</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">12</th>
+          <td>Cà rốt</td>
+          <td class="align-middle text-end pe-5 kcal-unit">33.0</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">13</th>
+          <td>Khoai lang</td>
+          <td class="align-middle text-end pe-5 kcal-unit">85.8</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">14</th>
+          <td>Dưa chuột</td>
+          <td class="align-middle text-end pe-5 kcal-unit">15.0</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">15</th>
+          <td>Đậu khuôn</td>
+          <td class="align-middle text-end pe-5 kcal-unit">76.0</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">16</th>
+          <td>Khổ qua</td>
+          <td class="align-middle text-end pe-5 kcal-unit">34.4</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">17</th>
+          <td>Xà lách</td>
+          <td class="align-middle text-end pe-5 kcal-unit">14.8</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">18</th>
+          <td>Dứa</td>
+          <td class="align-middle text-end pe-5 kcal-unit">50.0</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">19</th>
+          <td>Rong biển</td>
+          <td class="align-middle text-end pe-5 kcal-unit">44.0</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">20</th>
+          <td>Giá đỗ</td>
+          <td class="align-middle text-end pe-5 kcal-unit">44.0</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th rowspan="1" class="align-middle">Bread/ Noodles</th>
+          <th scope="row">21</th>
+          <td>Bún gạo lứt</td>
+          <td class="align-middle text-end pe-5 kcal-unit">350.0</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th rowspan="1" class="align-middle">Eggs</th>
+          <th scope="row">22</th>
+          <td>Trứng gà</td>
+          <td class="align-middle text-end pe-5 kcal-unit">155.1</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th rowspan="2" class="align-middle">Fruit</th>
+          <th scope="row">23</th>
+          <td>Chuối</td>
+          <td class="align-middle text-end pe-5 kcal-unit">88.7</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">24</th>
+          <td>Thanh long</td>
+          <td class="align-middle text-end pe-5 kcal-unit">264.0</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th rowspan="3" class="align-middle">Herbs</th>
+          <th scope="row">25</th>
+          <td>Thì là</td>
+          <td class="align-middle text-end pe-5 kcal-unit">43.0</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">26</th>
+          <td>Hành lá</td>
+          <td class="align-middle text-end pe-5 kcal-unit">32.3</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+        <tr>
+          <th scope="row">27</th>
+          <td>Tía tô</td>
+          <td class="align-middle text-end pe-5 kcal-unit">26.0</td>
+          <td class="align-middle text-end pe-5">
+            <div class="input-group">
+              <input
+                type="number"
+                class="form-control text-end fs-4 fw-bolder input-kcal"
+                placeholder="kcal?"
+              />
+            </div>
+          </td>
+          <td class="align-middle text-end pe-5 result"></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <th scope="row" colspan="5">Total</th>
+        <td class="align-middle text-end pe-5">333</td>
+      </tfoot>
+    </table>
+  </body>
+</html>
