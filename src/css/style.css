@@ -6,7 +6,8 @@
   --pink: #ff6bcb;
   --blue: #8be9fd;
   --gray: #333;
-  --font: "Poppins", sans-serif;
+  --fontPoppins: "Poppins", sans-serif;
+  --fontRobotoMono: 'Roboto Mono';
   --shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05);
 }
 
@@ -43,7 +44,7 @@ input,
 button,
 textarea,
 select {
-  font-family: var(--font);
+  font-family: var(--fontPoppins);
   font-size: 1.4rem;
   font-weight: 300;
   outline: none;
@@ -60,4 +61,8 @@ button {
 
 .table {
   box-shadow: var(--shadow);
+}
+
+td {
+  font-family: var(--fontRobotoMono);
 }
