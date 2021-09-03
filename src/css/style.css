@@ -64,7 +64,7 @@ button {
   box-shadow: var(--shadow);
 }
 
-td {
+td, input {
   font-family: var(--fontRoboto) !important;
   font-weight: 400 !important;
 }
